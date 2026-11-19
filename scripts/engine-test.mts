@@ -1,0 +1,13 @@
+import assert from 'node:assert';
+import { readFileSync } from 'node:fs';
+import { decide, DEFAULT_ASSUMPTIONS as A } from '../lib/engine.ts';
+const { lanes } = JSON.parse(readFileSync(new URL('../data/lanes.json', import.meta.url), 'utf8'));
+const L = (id: string) => lanes.find((l: any) => l.id === id);
+let d = decide(L('sha-rtm'), { poValue: 240000, windowDays: 45 }, A);
+assert.equal(d.recommended.route.id, 'cape');
+assert.equal(d.primary.bookable, false);
+d = decide(L('sha-rtm'), { poValue: 240000, windowDays: 20 }, A);
+assert.equal(d.recommended.route.id, 'air');
+d = decide(L('sha-lax'), { poValue: 100000, windowDays: 25 }, A);
+assert.ok(d.stay);
+console.log('engine tests ok');

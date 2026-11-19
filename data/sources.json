@@ -1,0 +1,24 @@
+{
+  "sources": [
+    { "id": "wp-redsea", "title": "Red Sea crisis", "publisher": "Wikipedia (secondary; cites Reuters, AP, UNCTAD, carrier statements)", "url": "https://en.wikipedia.org/wiki/Red_Sea_crisis", "apiTitle": "Red_Sea_crisis", "verify": true },
+    { "id": "wp-hormuz", "title": "2026 Strait of Hormuz crisis", "publisher": "Wikipedia (secondary; cites Reuters, IMO, DP World results)", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis", "apiTitle": "Strait_of_Hormuz_crisis", "verify": true },
+    { "id": "wp-panama", "title": "Panama Canal", "publisher": "Wikipedia (secondary; cites Panama Canal Authority notices)", "url": "https://en.wikipedia.org/wiki/Panama_Canal", "apiTitle": "Panama_Canal", "verify": true },
+    { "id": "wp-suez", "title": "Suez Canal", "publisher": "Wikipedia (secondary)", "url": "https://en.wikipedia.org/wiki/Suez_Canal", "apiTitle": "Suez_Canal", "verify": true },
+    { "id": "acp-advisories", "title": "Advisory to Shipping", "publisher": "Panama Canal Authority (primary)", "url": "https://pancanal.com/en/", "verify": false, "note": "Primary-source pointer only: the site is a JS-driven page and advisory text could not be machine-verified at build time." }
+  ],
+  "facts": [
+    { "id": "rs-traffic", "sourceId": "wp-redsea", "quote": "remaining below the pre-war level of 75 ships per day", "text": "Bab-el-Mandeb traffic was ~31 ships/day as of May 2026 vs a pre-war 75/day." },
+    { "id": "rs-houthi-saudi", "sourceId": "wp-redsea", "quote": "they announced a blockade of Saudi Arabian ports and ships in the Bab-el-Mandeb", "text": "Houthis resumed attacks on Saudi Arabia on 13 July 2026 and by 20 July announced a blockade of Saudi ports and ships in the Bab-el-Mandeb." },
+    { "id": "rs-cape-days", "sourceId": "wp-redsea", "quote": "ten days of travel, and US$1,000,000 in fuel costs to each voyage", "text": "Routing around the Cape of Good Hope adds ~11,000 nm, ten days of travel and ~US$1M in fuel per voyage (vessel-level, not per box)." },
+    { "id": "rs-carriers", "sourceId": "wp-redsea", "quote": "Some major shipping corporations, such as Maersk, have since resumed their Red Sea routes, while others have held off", "text": "After the Oct 2025 Gaza ceasefire some carriers (e.g. Maersk) resumed Red Sea routings; others held off." },
+    { "id": "rs-suez-days", "sourceId": "wp-suez", "quote": "10 days at 20 knots", "text": "The Suez route shortens Arabian Sea to London by about 8,900 km: ~10 days at 20 knots." },
+    { "id": "hz-closed", "sourceId": "wp-hormuz", "quote": "has been largely blocked by Iran since 28 February 2026", "text": "Hormuz shipping has been largely blocked by Iran since 28 Feb 2026." },
+    { "id": "hz-carriers", "sourceId": "wp-hormuz", "quote": "Major container shipping companies, including Maersk, CMA CGM, and Hapag-Lloyd, suspended transits through the strait", "text": "Maersk, CMA CGM and Hapag-Lloyd suspended transits through the strait (and related routes such as the Red Sea)." },
+    { "id": "hz-jebel", "sourceId": "wp-hormuz", "quote": "a fall of 90.1% year on year", "text": "Jebel Ali handled 374,000 TEU in Q2 2026, down 90.1% year on year." },
+    { "id": "hz-transits", "sourceId": "wp-hormuz", "quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful", "text": "Tracked Hormuz transits fell from ~90/day pre-war to a handful." },
+    { "id": "hz-fujairah", "sourceId": "wp-hormuz", "quote": "began building two terminals at Fujairah, outside the strait", "text": "DP World began building two terminals at Fujairah, outside the strait; cargo has been rerouted overland." },
+    { "id": "pa-slots", "sourceId": "wp-panama", "quote": "From 15 September 2026, the number of ships allowed to pass through it dropped to 32", "text": "Panama Canal daily transit slots cut from 36 to 34 (3 Sep 2026) and 32 (15 Sep 2026) on low rainfall amid El Niño." },
+    { "id": "pa-auction", "sourceId": "wp-panama", "quote": "paid a record US$5.3 million in an auction for priority passage", "text": "Aug 2026: record US$5.3M paid at auction for priority passage of one LPG tanker, amid restrictions tied to drought." },
+    { "id": "pa-normal", "sourceId": "wp-panama", "quote": "In normal times, 36 ships can transit the canal each day", "text": "Normal capacity is 36 transits/day; 22/day in Dec 2023 drought." }
+  ]
+}

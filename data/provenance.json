@@ -1,0 +1,47 @@
+{
+  "retrievedAt": "2026-11-17T01:24:01.540Z",
+  "sources": {
+    "wp-redsea": {
+      "status": "fetched",
+      "chars": 43094,
+      "revisionId": 1378533380,
+      "revisionTime": "2026-10-04T22:38:20Z"
+    },
+    "wp-hormuz": {
+      "status": "fetched",
+      "chars": 82642,
+      "revisionId": 1386025807,
+      "revisionTime": "2026-11-16T13:09:51Z"
+    },
+    "wp-panama": {
+      "status": "fetched",
+      "chars": 75349,
+      "revisionId": 1385316187,
+      "revisionTime": "2026-11-12T19:25:01Z"
+    },
+    "wp-suez": {
+      "status": "fetched",
+      "chars": 57216,
+      "revisionId": 1385352992,
+      "revisionTime": "2026-11-12T23:11:18Z"
+    },
+    "acp-advisories": {
+      "status": "link-only"
+    }
+  },
+  "facts": {
+    "rs-traffic": true,
+    "rs-houthi-saudi": true,
+    "rs-cape-days": true,
+    "rs-carriers": true,
+    "hz-closed": true,
+    "hz-carriers": true,
+    "hz-jebel": true,
+    "hz-transits": true,
+    "hz-fujairah": true,
+    "pa-slots": true,
+    "pa-auction": true,
+    "pa-normal": true,
+    "rs-suez-days": true
+  }
+}

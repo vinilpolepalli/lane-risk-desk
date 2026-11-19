@@ -1,0 +1,54 @@
+{
+  "assumptionsNote": "All transit-day and freight figures below are ESTIMATES (typical, rounded, not carrier schedules) unless daysBasis is 'cited'. Carrier schedule pages were not machine-readable at build time. Edit freight scaling in the Assumptions drawer.",
+  "lanes": [
+    { "id": "sha-rtm", "name": "Shanghai → Rotterdam", "origin": "Shanghai", "dest": "Rotterdam", "disruptionId": "red-sea", "status": "suspended",
+      "primaryDelayDays": 10, "primaryDelayBasis": "cited", "primaryDelayFactId": "rs-cape-days",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Suez / Red Sea (original)", "waypoints": [["Shanghai"],["Malacca"],["Bab-el-Mandeb","red-sea"],["Suez","red-sea"],["Rotterdam"]], "baseDays": 32, "daysBasis": "estimate", "freightPerFEU": 3200, "surchargeStatus": "suspended", "bookByDays": 10 },
+        { "id": "cape", "kind": "cape", "label": "Cape of Good Hope reroute", "waypoints": [["Shanghai"],["Malacca"],["Cape of Good Hope"],["Rotterdam"]], "baseDays": 42, "daysBasis": "derived", "daysFactId": "rs-cape-days", "freightPerFEU": 3700, "surchargeStatus": "normal", "bookByDays": 14 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Shanghai"],["Rotterdam"]], "baseDays": 6, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 3 }
+      ] },
+    { "id": "sin-rtm", "name": "Singapore → Rotterdam", "origin": "Singapore", "dest": "Rotterdam", "disruptionId": "red-sea", "status": "suspended",
+      "primaryDelayDays": 10, "primaryDelayBasis": "cited", "primaryDelayFactId": "rs-cape-days",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Suez / Red Sea (original)", "waypoints": [["Singapore"],["Bab-el-Mandeb","red-sea"],["Suez","red-sea"],["Rotterdam"]], "baseDays": 24, "daysBasis": "estimate", "freightPerFEU": 2800, "surchargeStatus": "suspended", "bookByDays": 10 },
+        { "id": "cape", "kind": "cape", "label": "Cape of Good Hope reroute", "waypoints": [["Singapore"],["Cape of Good Hope"],["Rotterdam"]], "baseDays": 34, "daysBasis": "derived", "daysFactId": "rs-cape-days", "freightPerFEU": 3250, "surchargeStatus": "normal", "bookByDays": 14 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Singapore"],["Rotterdam"]], "baseDays": 5, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 3 }
+      ] },
+    { "id": "ham-jed", "name": "Hamburg → Jeddah", "origin": "Hamburg", "dest": "Jeddah", "disruptionId": "red-sea", "status": "elevated",
+      "primaryDelayDays": 2, "primaryDelayBasis": "estimate",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Suez → northern Red Sea (original)", "waypoints": [["Hamburg"],["Suez","red-sea"],["Jeddah"]], "baseDays": 14, "daysBasis": "estimate", "freightPerFEU": 2400, "surchargeStatus": "elevated", "bookByDays": 7 },
+        { "id": "transship", "kind": "transship", "label": "Transship via Tanger-Med, feeder to Jeddah", "waypoints": [["Hamburg"],["Tanger-Med"],["Suez","red-sea"],["Jeddah"]], "baseDays": 19, "daysBasis": "estimate", "freightPerFEU": 2700, "surchargeStatus": "elevated", "bookByDays": 10 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Hamburg"],["Jeddah"]], "baseDays": 3, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 2 }
+      ] },
+    { "id": "sha-lax", "name": "Shanghai → Los Angeles", "origin": "Shanghai", "dest": "Los Angeles", "disruptionId": "pacific", "status": "normal",
+      "primaryDelayDays": 0, "primaryDelayBasis": "estimate",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Transpacific direct (original)", "waypoints": [["Shanghai"],["Pacific"],["Los Angeles"]], "baseDays": 15, "daysBasis": "estimate", "freightPerFEU": 2500, "surchargeStatus": "normal", "bookByDays": 7 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Shanghai"],["Los Angeles"]], "baseDays": 4, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 2 }
+      ] },
+    { "id": "szx-nyc", "name": "Shenzhen → New York (via Panama)", "origin": "Shenzhen", "dest": "New York", "disruptionId": "panama", "status": "restricted",
+      "primaryDelayDays": 4, "primaryDelayBasis": "estimate",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Panama Canal (original)", "waypoints": [["Shenzhen"],["Panama Canal","panama"],["New York"]], "baseDays": 31, "daysBasis": "estimate", "freightPerFEU": 4200, "surchargeStatus": "restricted", "bookByDays": 10 },
+        { "id": "landbridge", "kind": "transship", "label": "Discharge Los Angeles, rail to New York", "waypoints": [["Shenzhen"],["Pacific"],["Los Angeles"],["New York"]], "baseDays": 28, "daysBasis": "estimate", "freightPerFEU": 5200, "surchargeStatus": "normal", "bookByDays": 10 },
+        { "id": "suez", "kind": "cape", "label": "Westbound via Suez (Red Sea exposed)", "waypoints": [["Shenzhen"],["Bab-el-Mandeb","red-sea"],["Suez","red-sea"],["New York"]], "baseDays": 38, "daysBasis": "estimate", "freightPerFEU": 4600, "surchargeStatus": "suspended", "bookByDays": 14 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Shenzhen"],["New York"]], "baseDays": 5, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 2 }
+      ] },
+    { "id": "bom-fxt", "name": "Mumbai → Felixstowe", "origin": "Mumbai (Nhava Sheva)", "dest": "Felixstowe", "disruptionId": "red-sea", "status": "suspended",
+      "primaryDelayDays": 10, "primaryDelayBasis": "cited", "primaryDelayFactId": "rs-cape-days",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Suez / Red Sea (original)", "waypoints": [["Mumbai"],["Bab-el-Mandeb","red-sea"],["Suez","red-sea"],["Felixstowe"]], "baseDays": 21, "daysBasis": "estimate", "freightPerFEU": 2300, "surchargeStatus": "suspended", "bookByDays": 10 },
+        { "id": "cape", "kind": "cape", "label": "Cape of Good Hope reroute", "waypoints": [["Mumbai"],["Cape of Good Hope"],["Felixstowe"]], "baseDays": 31, "daysBasis": "estimate", "freightPerFEU": 2700, "surchargeStatus": "normal", "bookByDays": 14 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Mumbai"],["Felixstowe"]], "baseDays": 5, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 2 }
+      ] },
+    { "id": "dxb-rtm", "name": "Jebel Ali (Dubai) → Rotterdam", "origin": "Jebel Ali", "dest": "Rotterdam", "disruptionId": "hormuz", "status": "suspended",
+      "primaryDelayDays": 14, "primaryDelayBasis": "estimate",
+      "routes": [
+        { "id": "primary", "kind": "primary", "label": "Hormuz → Red Sea → Suez (original)", "waypoints": [["Jebel Ali"],["Hormuz","hormuz"],["Bab-el-Mandeb","red-sea"],["Suez","red-sea"],["Rotterdam"]], "baseDays": 20, "daysBasis": "estimate", "freightPerFEU": 2600, "surchargeStatus": "suspended", "bookByDays": 10 },
+        { "id": "fujairah", "kind": "transship", "label": "Truck to Fujairah / Khor Fakkan, Cape routing", "waypoints": [["Jebel Ali"],["Fujairah"],["Cape of Good Hope"],["Rotterdam"]], "baseDays": 34, "daysBasis": "estimate", "daysFactId": "hz-fujairah", "freightPerFEU": 3600, "surchargeStatus": "normal", "bookByDays": 12 },
+        { "id": "air", "kind": "air", "label": "Air-freight escalation", "waypoints": [["Jebel Ali"],["Rotterdam"]], "baseDays": 4, "daysBasis": "estimate", "freightPerFEU": 0, "surchargeStatus": "normal", "bookByDays": 2 }
+      ] }
+  ]
+}

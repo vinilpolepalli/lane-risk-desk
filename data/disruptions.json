@@ -1,0 +1,18 @@
+[
+  { "id": "red-sea", "corridor": "Red Sea / Bab-el-Mandeb / Suez", "status": "suspended", "effectiveDate": "2026-07-20",
+    "headline": "Scenario assumes Suez is unbookable; background reading (dated) reports a Houthi blockade announcement and reduced Bab-el-Mandeb traffic",
+    "statusNote": "Scenario assumption: Suez routing is treated as unbookable. Background (dated): carriers differed in whether they resumed Red Sea routings.",
+    "factIds": ["rs-houthi-saudi", "rs-traffic", "rs-carriers", "rs-cape-days"] },
+  { "id": "hormuz", "corridor": "Strait of Hormuz / Persian Gulf", "status": "suspended", "effectiveDate": "2026-02-28",
+    "headline": "Scenario assumes Hormuz is unbookable; background reading (dated) describes a blockage from 28 Feb 2026 and carrier suspensions",
+    "statusNote": "Scenario assumption only; see dated background items below.",
+    "factIds": ["hz-closed", "hz-carriers", "hz-jebel", "hz-transits", "hz-fujairah"] },
+  { "id": "panama", "corridor": "Panama Canal", "status": "restricted", "effectiveDate": "2026-09-15",
+    "headline": "Scenario assumes a restricted Panama Canal; background reading (dated) describes slot cuts from 36 to 32/day",
+    "statusNote": "Scenario assumption: capacity restriction rather than closure; queueing and priority-slot prices are the modeled exposure.",
+    "factIds": ["pa-slots", "pa-auction", "pa-normal"] },
+  { "id": "pacific", "corridor": "Transpacific (no chokepoint)", "status": "normal", "effectiveDate": null,
+    "headline": "No disruption event in this dataset for the Transpacific corridor",
+    "statusNote": "Included so the model can show a 'hold original routing' outcome. Absence of an entry here is not an assurance.",
+    "factIds": [] }
+]
